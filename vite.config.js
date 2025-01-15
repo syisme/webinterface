@@ -17,8 +17,8 @@ let alias = {
 }
 
 const conf = {
-  base: './', // index.html文件所在位置
-  root: './', // js导入的资源路径，src
+  base: './', // file location index.html
+  root: './', // js Imported resource path，src
   server: {
     open: true,
     port: process.env.VITE_DEV_PORT,
