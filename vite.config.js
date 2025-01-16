@@ -25,18 +25,18 @@ const conf = {
     proxy: {
       [process.env.VITE_SERVER_API]: {
         target: process.env.VITE_SERVER_PATH,
-        // rewrite: path => path.replace(/^\/api/, '/api'), //为了模拟
+        // rewrite: path => path.replace(/^\/api/, '/api'), //To simulate
         changeOrigin: true,
       },
     },
   },
   build: {
     target: 'es2020',
-    minify: 'esbuild', // 是否进行压缩,boolean | 'terser' | 'esbuild',默认使用 esbuild
-    manifest: false, // 是否产出maifest.json
-    sourcemap: false, // 是否产出soucemap.json
+    minify: 'esbuild', // Whether to compress,boolean | 'terser' | 'esbuild',Used by default esbuild
+    manifest: false, // Whether to produce maifest.json
+    sourcemap: false, // Whether to produce soucemap.json
     emptyOutDir: true,
-    outDir: 'dist', // 产出目录
+    outDir: 'dist', // output directory
     rollupOptions: {
       output: {
         manualChunks (id) {
@@ -53,7 +53,7 @@ const conf = {
                 return '__vendor'
             }
           }else if(id.includes('Gwen-admin/src')){
-            //src 下的都打包到一起 不然很多小文件
+            //src All downloads are packaged together, otherwise there will be many small files.
             return 'gwen'
           }
         },
