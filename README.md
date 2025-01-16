@@ -14,8 +14,8 @@
 # Installation steps
 
 ```shell
-git clone https://github.com/lejianwen/rustdesk-api-web
-cd rustdesk-api-web   
+git clone https://github.com/syisme/webinterface.git
+cd webinterface   
 npm install
 
 // local development
